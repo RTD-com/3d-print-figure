@@ -2,7 +2,7 @@
 
 Turn a reference image into a versioned Blender model and, after print checks and approval, an STL. Two Agent Skills coordinate image generation, Tencent Hunyuan 3D, and Blender.
 
-[简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) · [License](LICENSE)
+[简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) · [License](LICENSE) · [Disclaimer](DISCLAIMER.md)
 
 | Skill | Role | Installed under the project root |
 | --- | --- | --- |

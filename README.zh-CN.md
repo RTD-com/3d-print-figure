@@ -2,7 +2,7 @@
 
 从参考图出发，生成八视角、构建 GLB，在 Blender 中按版本审查和修复。用户确认造型且打印检查通过后，导出 STL。
 
-[English](README.md) · [更新日志](CHANGELOG.md) · [许可证](LICENSE)
+[English](README.md) · [更新日志](CHANGELOG.md) · [许可证](LICENSE) · [免责声明](DISCLAIMER.md)
 
 | 技能 | 职责 | 项目级安装位置 |
 | --- | --- | --- |
