@@ -1,0 +1,20 @@
+{
+  "$schema": "../review.schema.json",
+  "reviewer": "codex",
+  "target": "02-八视角提示词.v1.json#03_front",
+  "stage": "S3",
+  "verdict": "pass",
+  "scores": {
+    "identity": 5,
+    "view": 5,
+    "leftRight": 5,
+    "volume": 4,
+    "occlusion": 4,
+    "completeness": 5,
+    "background": 5,
+    "executability": 5
+  },
+  "issues": [],
+  "requiredChanges": [],
+  "notes": "仅为脱敏结构示例，不代表真实审核。"
+}

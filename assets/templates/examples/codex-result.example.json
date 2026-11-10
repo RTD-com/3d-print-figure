@@ -1,0 +1,19 @@
+{
+  "$schema": "../codex-result.schema.json",
+  "stage": "S7",
+  "status": "blocked",
+  "artifacts": [],
+  "checks": {
+    "orientation": "unknown",
+    "shapeAccepted": "unknown",
+    "watertight": "unknown"
+  },
+  "issues": [
+    {
+      "severity": "blocker",
+      "problem": "示例没有运行 Blender",
+      "evidence": "离线示例"
+    }
+  ],
+  "notes": "无真实渲染或打印验证。"
+}

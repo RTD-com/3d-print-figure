@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "审核报告",
+  "type": "object",
+  "required": [
+    "reviewer",
+    "target",
+    "stage",
+    "verdict",
+    "issues"
+  ],
+  "properties": {
+    "reviewer": {
+      "type": "string",
+      "enum": [
+        "dsh",
+        "codex"
+      ]
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "S3",
+        "S5",
+        "S8",
+        "S9",
+        "S10"
+      ]
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 5
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "severity",
+          "problem"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "major",
+              "minor"
+            ]
+          },
+          "location": {
+            "type": "string"
+          },
+          "problem": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "suggestedFix": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "requiredChanges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "description": "S3 对每个视角单独生成一份 review，scores 为平铺数值；S5/S8/S9/S10 同样使用。"
+}

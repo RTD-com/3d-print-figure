@@ -1,0 +1,28 @@
+{
+  "$schema": "../需求卡.schema.json",
+  "identity": {
+    "subject": "原创玩偶",
+    "knownIp": false
+  },
+  "costume": [
+    {
+      "item": "蓝外套"
+    }
+  ],
+  "accessories": [
+    {
+      "name": "圆扣",
+      "side": "角色自身左胸",
+      "visibleFrom": [
+        "front",
+        "left45",
+        "left"
+      ]
+    }
+  ],
+  "printIntent": {
+    "heightMm": 150,
+    "printer": "resin",
+    "wallMinMm": 1.0
+  }
+}

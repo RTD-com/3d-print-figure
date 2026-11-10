@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "需求卡",
+  "type": "object",
+  "required": ["identity", "costume", "accessories", "printIntent"],
+  "properties": {
+    "schemaVersion": { "type": "integer" },
+    "projectId": { "type": "string" },
+    "identity": {
+      "type": "object",
+      "required": ["subject", "knownIp"],
+      "properties": {
+        "subject": { "type": "string" },
+        "knownIp": { "type": "boolean" },
+        "ipName": { "type": "string" },
+        "ipSource": { "type": "string" },
+        "headBodyRatio": { "type": "string" },
+        "face": { "type": "string" },
+        "skin": { "type": "string" },
+        "proportions": { "type": "string" }
+      }
+    },
+    "costume": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item"],
+        "properties": {
+          "item": { "type": "string" },
+          "material": { "type": "string" },
+          "colorHex": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "accessories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "side"],
+        "properties": {
+          "name": { "type": "string" },
+          "side": { "type": "string", "description": "角色自身左/右/双侧/中央" },
+          "visibleFrom": { "type": "array", "items": { "type": "string" } },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "pose": { "type": "string" },
+    "base": { "type": "string" },
+    "forbidden": { "type": "array", "items": { "type": "string" } },
+    "printIntent": {
+      "type": "object",
+      "required": ["heightMm", "printer", "wallMinMm"],
+      "properties": {
+        "heightMm": { "type": "number" },
+        "printer": { "type": "string", "enum": ["resin", "fdm"] },
+        "wallMinMm": { "type": "number" }
+      }
+    },
+    "ipRiskAcknowledged": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "八视角提示词",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "identityLock",
+    "costumeLock",
+    "canvasLock",
+    "masterView",
+    "views"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "identityLock": {
+      "type": "string"
+    },
+    "costumeLock": {
+      "type": "string"
+    },
+    "canvasLock": {
+      "type": "string"
+    },
+    "masterView": {
+      "type": "string",
+      "const": "03_front"
+    },
+    "views": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "prefixItems": [
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "01_top.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "top"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "02_left45.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "left45"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "03_front.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "front"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "04_right45.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "right45"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "05_left.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "left"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "06_right.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "right"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "07_back.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "back"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "file",
+            "slot",
+            "camera",
+            "prompt"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "const": "08_bottom.png"
+            },
+            "slot": {
+              "type": "string",
+              "const": "bottom"
+            },
+            "camera": {
+              "type": "string",
+              "minLength": 1
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 350,
+              "pattern": "\\S"
+            },
+            "mustShow": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "mustHide": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "items": false
+    },
+    "consistencyRules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "locked"
+      ]
+    },
+    "sha256": {
+      "type": "string"
+    }
+  },
+  "description": "固定顺序的八个 file/slot 配对，禁止重复与缺项。prompt 至少350 Unicode字符且非空白；六块语义仍由人工/Codex审核。"
+}

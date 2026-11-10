@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DSH→Codex 交接",
+  "type": "object",
+  "required": [
+    "handoffId",
+    "from",
+    "to",
+    "stage",
+    "projectRoot"
+  ],
+  "properties": {
+    "handoffId": {
+      "type": "string"
+    },
+    "from": {
+      "type": "string",
+      "enum": [
+        "DSH"
+      ]
+    },
+    "to": {
+      "type": "string",
+      "enum": [
+        "Codex"
+      ]
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "S3",
+        "S4",
+        "S5",
+        "S7",
+        "S8",
+        "S9",
+        "S10"
+      ]
+    },
+    "projectRoot": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    "instructionsFile": {
+      "type": "string"
+    },
+    "outputContract": {
+      "type": "object",
+      "properties": {
+        "reportPath": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "timeoutSec": {
+      "type": "integer"
+    },
+    "retry": {
+      "type": "object",
+      "properties": {
+        "max": {
+          "type": "integer"
+        },
+        "backoffSec": {
+          "type": "integer"
+        }
+      }
+    },
+    "skillRoot": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

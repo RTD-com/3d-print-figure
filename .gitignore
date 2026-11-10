@@ -1,0 +1,52 @@
+# Local runtime and browser credentials
+.browser-profile/
+.browser-profiles/
+**/.browser-profile/
+**/.browser-profiles/
+**/browser-profile/
+**/browser-profiles/
+**/model-url.json
+**/metadata.json
+node_modules/
+.tmp/
+*.log
+downloads/
+*.jsonl
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.ppk
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Private projects, raw evidence, and generated models
+**/手办/
+**/projects/
+**/.dsh/
+**/.agents/
+docs/evidence/
+docs/reports/
+docs/archive/
+*.glb
+*.stl
+*.blend
+*.blend[0-9]*
+*.zip
+dist/
+
+# Keep private images and model formats out of the source tree.
+*.gltf
+*.obj
+*.fbx
+*.3mf
+*.png
+*.jpg
+*.jpeg
+*.webp

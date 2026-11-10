@@ -1,0 +1,25 @@
+{
+  "$schema": "../handoff.schema.json",
+  "handoffId": "S5-offline-example",
+  "from": "DSH",
+  "to": "Codex",
+  "stage": "S5",
+  "projectRoot": "<projectRoot>",
+  "skillRoot": "<skillRoot>",
+  "inputs": [
+    {
+      "path": "3.图片/v1/03_front.png",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "instructionsFile": "1.Codex/S5-prompt.md",
+  "outputContract": {
+    "reportPath": "1.Codex/S5-result.json",
+    "schema": "<skillRoot>/assets/templates/codex-result.schema.json"
+  },
+  "timeoutSec": 600,
+  "retry": {
+    "max": 3,
+    "backoffSec": 20
+  }
+}
