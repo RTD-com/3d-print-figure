@@ -1,6 +1,6 @@
-# 3D 打印手办
+# 手办 3D 打印技能
 
-从参考图出发，生成八视角、构建 GLB，在 Blender 中按版本审查和修复。用户确认造型且打印检查通过后，导出 STL。
+两项 Agent Skill 协作完成从手办参考图到 STL 的流程。DSH 编排需求、混元 3D 与用户确认。Codex 生成八视角，在 Blender 中复核与修复模型，并在造型验收和打印检查通过后导出。
 
 [English](README.md) · [更新日志](CHANGELOG.md) · [许可证](LICENSE) · [免责声明](DISCLAIMER.md)
 
@@ -14,8 +14,8 @@
 准备 Windows 10 或 11、Windows PowerShell 5.1、Git、Python 与 Pillow，以及 Node.js 22 或更新版本。全流程还需要支持 Agent Skills 的 DSH、带图像生成能力的 Codex CLI、Blender 5.x、Edge 或 Chrome，以及混元 3D 网页账号。Blender 可在独立后台进程运行，也可连接已配置的 Blender MCP。
 
 ```powershell
-git clone --branch v1.0.0 --single-branch https://github.com/RTD-com/3d-print-figure.git
-Set-Location 3d-print-figure
+git clone --branch v1.0.0 --single-branch https://github.com/RTD-com/figure-print-skills.git
+Set-Location figure-print-skills
 $workdir = "<你的工作目录>"
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -ProjectRoot $workdir
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/preflight.ps1 -Workdir $workdir

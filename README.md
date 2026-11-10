@@ -1,6 +1,6 @@
-# 3D Print Figure
+# Figure Print Skills
 
-Turn a reference image into a versioned Blender model and, after print checks and approval, an STL. Two Agent Skills coordinate image generation, Tencent Hunyuan 3D, and Blender.
+Two Agent Skills for preparing 3D-printable figures from reference images. DSH coordinates requirements, Hunyuan 3D, and user approvals. Codex generates the eight views, reviews and repairs the model in Blender, and exports an STL after print checks pass.
 
 [简体中文](README.zh-CN.md) · [Changelog](CHANGELOG.md) · [License](LICENSE) · [Disclaimer](DISCLAIMER.md)
 
@@ -14,8 +14,8 @@ Turn a reference image into a versioned Blender model and, after print checks an
 Use Windows 10 or 11, Windows PowerShell 5.1, Git, Python with Pillow, and Node.js 22 or later. The full image-to-model workflow also needs a DSH runtime with Agent Skills support, Codex CLI with image generation, Blender 5.x, and an Edge or Chrome session with a Hunyuan 3D account. Blender can run in the background or through an already configured Blender MCP connection.
 
 ```powershell
-git clone --branch v1.0.0 --single-branch https://github.com/RTD-com/3d-print-figure.git
-Set-Location 3d-print-figure
+git clone --branch v1.0.0 --single-branch https://github.com/RTD-com/figure-print-skills.git
+Set-Location figure-print-skills
 $workdir = "<your working directory>"
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1 -ProjectRoot $workdir
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/preflight.ps1 -Workdir $workdir

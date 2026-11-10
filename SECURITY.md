@@ -2,7 +2,7 @@
 
 ## 报告漏洞
 
-当前维护版本为 v1.0.0。请通过 [GitHub 私有漏洞报告](https://github.com/RTD-com/3d-print-figure/security/advisories/new)提供版本、最小复现、影响范围与脱敏证据。将账号信息、凭据、签名链接、用户图像及受影响项目留在私有环境。
+当前维护版本为 v1.0.0。请通过 [GitHub 私有漏洞报告](https://github.com/RTD-com/figure-print-skills/security/advisories/new)提供版本、最小复现、影响范围与脱敏证据。将账号信息、凭据、签名链接、用户图像及受影响项目留在私有环境。
 
 ## 运行边界
 
